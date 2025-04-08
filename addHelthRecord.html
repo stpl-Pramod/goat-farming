@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Health Record - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Health Record</h1>
+        <form action="/submit-health-record" method="POST">
+            <div class="form-group">
+                <label for="animal-id">Animal ID*</label>
+                <select id="animal-id" name="animal-id" required>
+                    <option value="">Select Animal</option>
+                    <!-- Populate dynamically from backend -->
+                    <option value="C001">C001 - Gir (Cattle)</option>
+                    <option value="B002">B002 - Murrah (Buffalo)</option>
+                    <option value="G003">G003 - Jamnapari (Goat)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Date*</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="vaccination">Vaccination (if applicable)</label>
+                <input type="text" id="vaccination" name="vaccination" placeholder="e.g., FMD Vaccine">
+            </div>
+            <div class="form-group">
+                <label for="disease">Disease (if applicable)</label>
+                <input type="text" id="disease" name="disease" placeholder="e.g., Mastitis">
+            </div>
+            <div class="form-group">
+                <label for="vet-visit">Veterinary Visit Details*</label>
+                <textarea id="vet-visit" name="vet-visit" placeholder="e.g., Vet Name: Dr. Sharma, Treatment: Antibiotics" required></textarea>
+            </div>
+            <button type="submit">Save Health Record</button>
+        </form>
+    </div>
+</body>
+</html>

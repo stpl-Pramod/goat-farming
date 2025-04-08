@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Breeding/Production Record - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Breeding/Production Record</h1>
+        <form action="/submit-breeding-production" method="POST">
+            <div class="form-group">
+                <label for="animal-id">Animal ID*</label>
+                <select id="animal-id" name="animal-id" required>
+                    <option value="">Select Animal</option>
+                    <!-- Populate dynamically from backend -->
+                    <option value="C001">C001 - Gir (Cattle)</option>
+                    <option value="B002">B002 - Murrah (Buffalo)</option>
+                    <option value="G003">G003 - Jamnapari (Goat)</option>
+                    <option value="P004">P004 - Broiler (Poultry)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Date*</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="breeding-details">Breeding Details (if applicable)</label>
+                <textarea id="breeding-details" name="breeding-details" placeholder="e.g., Insemination Date: 2025-04-01, Bull ID: B005"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="production-type">Production Type*</label>
+                <select id="production-type" name="production-type" required>
+                    <option value="">Select Type</option>
+                    <option value="Milk">Milk</option>
+                    <option value="Eggs">Eggs</option>
+                    <option value="Meat">Meat</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="yield-quantity">Yield Quantity*</label>
+                <input type="number" id="yield-quantity" name="yield-quantity" min="0" step="0.1" placeholder="e.g., 10.5 (liters for milk, count for eggs, kg for meat)" required>
+            </div>
+            <div class="form-group">
+                <label for="sales-amount">Sales Amount (₹)</label>
+                <input type="number" id="sales-amount" name="sales-amount" min="0" step="0.01" placeholder="e.g., 500.00">
+            </div>
+            <button type="submit">Save Record</button>
+        </form>
+    </div>
+</body>
+</html>

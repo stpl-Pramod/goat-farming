@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+        .profit {
+            color: #388e3c;
+            font-weight: bold;
+        }
+        .loss {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report</h1>
+        <a href="/generate-report" class="back-btn">Back to Generate Report</a>
+        
+        <!-- Sample Milk Production Trends -->
+        <h2>Milk Production Trends (Mar 1 - Apr 1, 2025)</h2>
+        <table id="milk-production-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Animal ID</th>
+                    <th>Milk Yield (Liters)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-03-01</td>
+                    <td>C001</td>
+                    <td>10.5</td>
+                </tr>
+                <tr>
+                    <td>2025-03-15</td>
+                    <td>B002</td>
+                    <td>12.0</td>
+                </tr>
+                <tr>
+                    <td>2025-04-01</td>
+                    <td>C001</td>
+                    <td>11.0</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>-</td>
+                    <td><strong>33.5 Liters</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Sample Profit/Loss Analysis -->
+        <h2>Profit/Loss Analysis (Mar 1 - Apr 1, 2025)</h2>
+        <table id="profit-loss-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-03-01</td>
+                    <td>Feed (Expense)</td>
+                    <td class="loss">-500.00</td>
+                </tr>
+                <tr>
+                    <td>2025-03-15</td>
+                    <td>Milk Sales (Income)</td>
+                    <td class="profit">750.00</td>
+                </tr>
+                <tr>
+                    <td>2025-04-01</td>
+                    <td>Vet Care (Expense)</td>
+                    <td class="loss">-300.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>Net Profit/Loss</td>
+                    <td class="profit"><strong>₹450.00</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

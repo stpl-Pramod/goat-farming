@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeding & Production Records - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .add-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .add-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Breeding & Production Records</h1>
+        <a href="/add-breeding-production" class="add-btn">Add New Record</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Animal ID</th>
+                    <th>Date</th>
+                    <th>Breeding Details</th>
+                    <th>Production Type</th>
+                    <th>Yield Quantity</th>
+                    <th>Sales Amount (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data (Replace with dynamic data from backend) -->
+                <tr>
+                    <td>C001</td>
+                    <td>2025-04-01</td>
+                    <td>Insemination: 2025-03-20, Bull ID: B005</td>
+                    <td>Milk</td>
+                    <td>10.5 liters</td>
+                    <td>500.00</td>
+                </tr>
+                <tr>
+                    <td>P004</td>
+                    <td>2025-03-25</td>
+                    <td>-</td>
+                    <td>Eggs</td>
+                    <td>30 eggs</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td>G003</td>
+                    <td>2025-03-15</td>
+                    <td>Mating: 2025-03-10</td>
+                    <td>Meat</td>
+                    <td>25.0 kg</td>
+                    <td>7500.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

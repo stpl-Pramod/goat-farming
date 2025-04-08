@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 60px;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar .nav-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+    /* background: #ffffff; */
+    border-radius: 5px;
+    color: #363636;
+    
+    margin-bottom: 8px;
+}
+.sidebar .nav-link:hover {
+    background: #4170f4; 
+    color: #ffffff; 
+}
+.sidebar .nav-link[aria-expanded="true"] {
+    background: #4170f4; 
+    color: #ffffff; 
+}
+.nav-item .collapse {
+    background: #d7e2ff;
+    padding: 4px;
+}
+.nav-item .collapse .nav-link{
+    font-size: 0.9rem;
+    padding-left: 30px;
+    background: transparent;
+    line-height: 20px;
+}
+
+.sidebar .nav-link .nav-label {
+    visibility: hidden;
+    /* transition: .5s; */
+}
+
+.sidebar:hover .nav-link .nav-label {
+    visibility: visible;
+    /* transition: all .5s; */
+}
+
+.sidebar .nav-link i {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.sidebar .nav-link i.bi-chevron-down {
+    font-size: 14px;
+    visibility: hidden;
+    margin-right: 4px;
+}
+
+.sidebar:hover .nav-link i.bi-chevron-down {
+    visibility: visible;
+}
+
+
+.collapse .nav-link {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+}
+
+.collapse .collapse .nav-link {
+    padding-left: 3rem;
+}

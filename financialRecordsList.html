@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Records - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .add-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .add-btn:hover {
+            background-color: #45a049;
+        }
+        .expense {
+            color: #d32f2f;
+        }
+        .income {
+            color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Records</h1>
+        <a href="/add-financial-record" class="add-btn">Add New Financial Record</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Amount (₹)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data (Replace with dynamic data from backend) -->
+                <tr>
+                    <td>2025-04-01</td>
+                    <td>Expense</td>
+                    <td>Feed</td>
+                    <td class="expense">500.00</td>
+                    <td>Green fodder purchase</td>
+                </tr>
+                <tr>
+                    <td>2025-03-25</td>
+                    <td>Income</td>
+                    <td>Milk Sales</td>
+                    <td class="income">750.00</td>
+                    <td>10 liters sold</td>
+                </tr>
+                <tr>
+                    <td>2025-03-20</td>
+                    <td>Expense</td>
+                    <td>Vet Care</td>
+                    <td class="expense">300.00</td>
+                    <td>Vet visit for C001</td>
+                </tr>
+                <tr>
+                    <td>2025-03-15</td>
+                    <td>Income</td>
+                    <td>Meat Sales</td>
+                    <td class="income">7500.00</td>
+                    <td>25 kg goat meat sold</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

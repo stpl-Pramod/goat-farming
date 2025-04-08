@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Indian Animal Farming Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #4CAF50;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .lang-switcher select {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .card p {
+            font-size: 24px;
+            margin: 0;
+            color: #4CAF50;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById("language").value;
+            const elements = {
+                "en": {
+                    title: "Dashboard - Indian Animal Farming Admin",
+                    sidebarTitle: "Menu",
+                    livestock: "Livestock Management",
+                    health: "Health Records",
+                    feed: "Feed Management",
+                    breeding: "Breeding & Production",
+                    financials: "Financials",
+                    users: "User Management",
+                    reports: "Reports",
+                    cards: [
+                        "Total Animals", "Recent Health Issues", "Feed Stock (kg)", 
+                        "Milk Yield (Liters)", "Net Profit (₹)", "Active Users"
+                    ]
+                },
+                "hi": {
+                    title: "डैशबोर्ड - भारतीय पशु खेती प्रशासन",
+                    sidebarTitle: "मेनू",
+                    livestock: "पशुधन प्रबंधन",
+                    health: "स्वास्थ्य रिकॉर्ड",
+                    feed: "चारा प्रबंधन",
+                    breeding: "प्रजनन और उत्पादन",
+                    financials: "वित्तीय",
+                    users: "उपयोगकर्ता प्रबंधन",
+                    reports: "रिपोर्ट",
+                    cards: [
+                        "कुल पशु", "हाल की स्वास्थ्य समस्याएँ", "चारा स्टॉक (किग्रा)", 
+                        "दूध उत्पादन (लीटर)", "शुद्ध लाभ (₹)", "सक्रिय उपयोगकर्ता"
+                    ]
+                },
+                "mr": {
+                    title: "डॅशबोर्ड - भारतीय पशु शेती प्रशासन",
+                    sidebarTitle: "मेनू",
+                    livestock: "पशुधन व्यवस्थापन",
+                    health: "आरोग्य नोंदी",
+                    feed: "खाद्य व्यवस्थापन",
+                    breeding: "प्रजनन आणि उत्पादन",
+                    financials: "आर्थिक",
+                    users: "वापरकर्ता व्यवस्थापन",
+                    reports: "अहवाल",
+                    cards: [
+                        "एकूण प्राणी", "अलीकडील आरोग्य समस्या", "खाद्य साठा (किलो)", 
+                        "दूध उत्पादन (लिटर)", "निव्वळ नफा (₹)", "सक्रिय वापरकर्ते"
+                    ]
+                }
+            };
+            document.title = elements[lang].title;
+            document.getElementById("sidebar-title").innerText = elements[lang].sidebarTitle;
+            document.getElementById("livestock-link").innerText = elements[lang].livestock;
+            document.getElementById("health-link").innerText = elements[lang].health;
+            document.getElementById("feed-link").innerText = elements[lang].feed;
+            document.getElementById("breeding-link").innerText = elements[lang].breeding;
+            document.getElementById("financials-link").innerText = elements[lang].financials;
+            document.getElementById("users-link").innerText = elements[lang].users;
+            document.getElementById("reports-link").innerText = elements[lang].reports;
+            const cardTitles = document.querySelectorAll(".card h3");
+            for (let i = 0; i < cardTitles.length; i++) {
+                cardTitles[i].innerText = elements[lang].cards[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 id="sidebar-title">Menu</h2>
+            <a href="/livestock" id="livestock-link">Livestock Management</a>
+            <a href="/health-records" id="health-link">Health Records</a>
+            <a href="/feed-management" id="feed-link">Feed Management</a>
+            <a href="/breeding-production" id="breeding-link">Breeding & Production</a>
+            <a href="/financials" id="financials-link">Financials</a>
+            <a href="/users" id="users-link">User Management</a>
+            <a href="/reports" id="reports-link">Reports</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="lang-switcher">
+                    <label for="language">Language / भाषा / भाषा:</label>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी (Hindi)</option>
+                        <option value="mr">मराठी (Marathi)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-grid">
+                <!-- Livestock Management -->
+                <div class="card">
+                    <h3>Total Animals</h3>
+                    <p>25</p>
+                    <a href="/livestock">View Details</a>
+                </div>
+
+                <!-- Health Records -->
+                <div class="card">
+                    <h3>Recent Health Issues</h3>
+                    <p>3</p>
+                    <a href="/health-records">View Records</a>
+                </div>
+
+                <!-- Feed Management -->
+                <div class="card">
+                    <h3>Feed Stock (kg)</h3>
+                    <p>150.5</p>
+                    <a href="/feed-management">View Stock</a>
+                </div>
+
+                <!-- Breeding & Production -->
+                <div class="card">
+                    <h3>Milk Yield (Liters)</h3>
+                    <p>33.5</p>
+                    <a href="/breeding-production">View Production</a>
+                </div>
+
+                <!-- Financials -->
+                <div class="card">
+                    <h3>Net Profit (₹)</h3>
+                    <p>450.00</p>
+                    <a href="/financials">View Financials</a>
+                </div>
+
+                <!-- User Roles -->
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p>5</p>
+                    <a href="/users">Manage Users</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

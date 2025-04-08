@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records - Livestock Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .add-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .add-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Records</h1>
+        <a href="/add-health-record" class="add-btn">Add New Health Record</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Animal ID</th>
+                    <th>Date</th>
+                    <th>Vaccination</th>
+                    <th>Disease</th>
+                    <th>Vet Visit Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data (Replace with dynamic data from backend) -->
+                <tr>
+                    <td>C001</td>
+                    <td>2025-04-01</td>
+                    <td>FMD Vaccine</td>
+                    <td>-</td>
+                    <td>Vet: Dr. Sharma, Routine Checkup</td>
+                </tr>
+                <tr>
+                    <td>B002</td>
+                    <td>2025-03-15</td>
+                    <td>-</td>
+                    <td>Mastitis</td>
+                    <td>Vet: Dr. Patel, Antibiotics Prescribed</td>
+                </tr>
+                <tr>
+                    <td>G003</td>
+                    <td>2025-02-20</td>
+                    <td>PPR Vaccine</td>
+                    <td>-</td>
+                    <td>Vet: Dr. Kumar, Vaccination Done</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

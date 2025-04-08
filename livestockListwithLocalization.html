@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestock Management - Animal List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .add-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .add-btn:hover {
+            background-color: #45a049;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switcher select {
+            padding: 5px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById("language").value;
+            const elements = {
+                "en": {
+                    title: "Livestock Management",
+                    addBtn: "Add New Animal",
+                    headers: ["Animal ID", "Breed", "Age (Months)", "Gender"]
+                },
+                "hi": {
+                    title: "पशुधन प्रबंधन",
+                    addBtn: "नया पशु जोड़ें",
+                    headers: ["पशु आईडी", "नस्ल", "उम्र (महीने)", "लिंग"]
+                },
+                "mr": {
+                    title: "पशुधन व्यवस्थापन",
+                    addBtn: "नवीन प्राणी जोडा",
+                    headers: ["प्राणी ओळख", "जात", "वय (महिने)", "लिंग"]
+                }
+            };
+            document.getElementById("title").innerText = elements[lang].title;
+            document.getElementById("add-btn").innerText = elements[lang].addBtn;
+            const ths = document.querySelectorAll("th");
+            for (let i = 0; i < ths.length; i++) {
+                ths[i].innerText = elements[lang].headers[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <label for="language">Language / भाषा / भाषा:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="mr">मराठी (Marathi)</option>
+            </select>
+        </div>
+        <h1 id="title">Livestock Management</h1>
+        <a href="/add-animal" class="add-btn" id="add-btn">Add New Animal</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Animal ID</th>
+                    <th>Breed</th>
+                    <th>Age (Months)</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Data -->
+                <tr>
+                    <td>C001</td>
+                    <td>Gir</td>
+                    <td>24</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>B002</td>
+                    <td>Murrah</td>
+                    <td>36</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>G003</td>
+                    <td>Osmanabadi</td>
+                    <td>18</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
