@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Components Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="assets/css/buttons.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="page-header-breadcrumb">
+            <nav aria-label="breadcrumb">
+                <p class="page-title mb-2 text-lg fw-semibold">Components</p>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-main text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Components</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Forms -->
+        <div class="card mb-2">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-title">Form Components</div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Never share your email with anyone else.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+                        </div>
+                        <div class="col-md-3">
+                            <div class=" form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="exampleSelect" class="form-label">Example select</label>
+                            <select class="form-select  form-select-sm" id="exampleSelect">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="exampleTextarea" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    Default checked radio
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="upload-container">
+                                <label for="exampleTextarea" class="form-label">Upload File</label>
+
+                                <div class="drag-area">
+                                    <p class="mb-1 text-muted">Drag File Here</p>
+                                    <p class="mb-0 small fw-semibold">OR</p>
+                                    <p class="text-main fw-semibold mb-0"><span
+                                            class="text-decoration-underline">Browse</span></p>
+                                </div>
+                                <div class="file-info mt-2">
+                                    <img src="https://img.icons8.com/color/48/000000/image.png" class="file-icon"
+                                        alt="icon">
+                                    <span>s1.png</span>
+                                </div>
+
+                                <div class="progress mb-2" role="progressbar" aria-label="Animated striped example"
+                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                    style="width: 75%"></div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-end">
+                            <button type="submit" class="btn btn-main">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+   
+        <!-- Alert -->
+        <div class="card mb-2">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-title">Card Header</div>
+                <button class="btn btn-sm btn-main-light">
+                    Edit
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    A simple success alert—check it out!
+                </div>
+                <div class="alert alert-primary py-2" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="alert alert-secondary py-1" role="alert">
+                    A simple secondary alert—check it out!
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="card mb-2">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-title">Buttons</div>
+
+            </div>
+            <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <button type="button" class="btn btn-main">btn-main</button>
+                    <button type="button" class="btn btn-main-light">btn-main-light</button>
+                    <button type="button" class="btn btn-main-dark">btn-main-dark</button>
+                    <button type="button" class="btn">Submit</button>
+                    <button type="button" class="btn bg-success-subtle text-success-emphasis">Submit</button>
+                </div>
+                <div class="d-flex  align-items-center gap-2 mb-3">
+                    <button type="button" class="btn btn-outline-main">btn-main</button>
+                    <button type="button" class="btn btn-outline-primary">btn-main-light</button>
+                    <button type="button" class="btn btn-outline-danger">btn-main-light</button>
+                    <button type="button" class="btn btn-outline-success">btn-main-light</button>
+                    <button type="button" class="btn btn-outline-warning">btn-main-light</button>
+
+                </div>
+                <div class="d-flex  align-items-center gap-2 mb-3">
+                    <button type="button" class="btn btn-sm btn-main">btn-main btn-sm</button>
+                    <button type="button" class="btn btn-sm btn-main-light">btn-main btn-sm</button>
+                    <button type="button" class="btn btn-sm btn-success">btn-main btn-sm</button>
+                    <button type="button" class="btn btn-sm bg-success-subtle text-success-emphasis">btn-main
+                        btn-sm</button>
+                </div>
+                <div class="d-flex  align-items-center gap-2 mb-3">
+                    <button type="button" class="btn btn-lg btn-main">btn-main btn-lg</button>
+                    <button type="button" class="btn btn-lg btn-main-light">btn-main-light btn-lg</button>
+                    <button type="button" class="btn btn-lg btn-danger">btn-danger btn-lg</button>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Cards -->
+        <div class="card mb-2">
+            <div class="card-header">
+                <h6 class="card-title fw-medium mb-2">Card title</h6>
+                <p class="card-subtitle mb-0 text-muted">Card subtitle</p>
+            </div>
+            <div class="card-body">
+                <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration many variations of passages of Lorem Ipsum available there are so many ways to solve but the majority.</p>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-main">Save</button>
+            </div>
+        </div>
+<!-- Badge -->
+        <div class="card mb-2">
+            <div class="card-header">
+                <h6 class="card-title fw-medium mb-2">Badge</h6>
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-2 align-items-center mb-2">
+                    <span class="badge bg-main">Main</span>
+                    <span class="badge bg-primary">Primary</span>
+                    <span class="badge bg-secondary">Secondary</span>
+                    <span class="badge bg-success">Success</span>
+                    <span class="badge bg-danger">Danger</span>
+                    <span class="badge bg-warning text-dark">Warning</span>
+                    <span class="badge bg-info text-dark">Info</span>
+                    <span class="badge bg-light text-dark">Light</span>
+                    <span class="badge bg-dark text-light">Dark</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center mb-2">
+                    <span class="badge bg-main-light">Main</span>
+                    <span class="badge bg-primary-subtle text-primary">Primary</span>
+                    <span class="badge bg-secondary-subtle text-secondary">Secondary</span>
+                    <span class="badge bg-success-subtle text-success">Success</span>
+                    <span class="badge bg-danger-subtle text-danger">Danger</span>
+                    <span class="badge bg-warning-subtle text-warning">Warning</span>
+                    <span class="badge bg-info-subtle text-info">Info</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center mb-2">
+                    <button type="submit" class="btn btn-sm btn-outline-main px-2 d-flex gap-1 align-self-center">Notification <span class="bg-main-light text-main small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-outline-primary px-2 d-flex gap-1 align-self-center">Notification <span class="bg-primary-subtle text-primary small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-outline-success px-2 d-flex gap-1 align-self-center">Notification <span class="bg-success-subtle text-success small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-outline-danger px-2 d-flex gap-1 align-self-center">Notification <span class="bg-danger-subtle text-danger small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-outline-info px-2 d-flex gap-1 align-self-center">Notification <span class="bg-info-subtle text-info small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-outline-dark px-2 d-flex gap-1 align-self-center">Notification <span class="bg-dark-subtle text-dark small px-2 rounded-1 fw-bold">02</span></button>
+                    <button type="submit" class="btn btn-sm btn-main position-relative">Notification <span class="bg-danger text-white position-absolute top-0 start-100 translate-middle rounded-1 small px-1">02</span></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Filter -->
+        <h6 class="card-title fw-medium mb-2">Table-Filter</h6>
+        <div class="table-filter mb-2">
+            <div class="row g-2">
+                <div class="col-md">
+                    <input type="text" class="form-control form-control-sm" placeholder="Name">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control form-control-sm" placeholder="Position">
+                </div>
+                <div class="col-md">
+                    <select class="form-select form-select-sm">
+                        <option selected>Select Option</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control form-control-sm" placeholder="Search">
+                </div>
+                <div class="col-md-auto">
+                    <button type="submit" class="btn btn-sm btn-main-light">Clear</button>
+                    <button type="submit" class="btn btn-sm btn-main">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="table-filter mb-2 p-2 bg-light-subtle rounded-2 border">
+            <div class="row g-2">
+                <div class="col-md">
+                    <input type="text" class="form-control form-control-sm" placeholder="Name">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control form-control-sm" placeholder="Position">
+                </div>
+                <div class="col-md">
+                    <select class="form-select form-select-sm">
+                        <option selected>Select Option</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control form-control-sm" placeholder="Search">
+                </div>
+                <div class="col-md-auto">
+                    <button type="submit" class="btn btn-sm bg-danger-subtle text-danger"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="submit" class="btn btn-sm bg-primary-subtle text-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="table-content"></div>
+        <div class="card mb-2">
+            <div class="card-header"></div>
+            <div class="card-body"></div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-header"></div>
+            <div class="card-body"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Badge -->
+    <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+
+
+    <!-- Card -->
+    <div class="card mt-4" style="width: 18rem;">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/600x200" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/600x200/aaa" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Modal body text goes here.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Spinner -->
+    <div class="mt-4">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table class="table table-striped table-hover mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
