@@ -185,7 +185,7 @@ table.fold-table>tbody>tr.view th {
 }
 table.fold-table>tbody>tr.view:hover td,
 table.fold-table>tbody>tr.view:hover th {
-    background: #f7f7f7;
+    background: var(--bs-light);
 }
 
 table.fold-table>tbody>tr.view td:last-child,
@@ -231,21 +231,33 @@ table.fold-table>tbody>tr.fold.open {
 
 /* accordian style end */
 .accordian-main .accordion-button:not(.collapsed) {
-    color: var(--color-main-dark);
+    color: var(--color-main);
     background-color: var(--color-main-light);
     box-shadow: none;
+    border-left: 3px solid #984aff;
+    background: #f9f5ff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .accordian-main .accordion-button {
     box-shadow: none;
     font-weight: 500;
-    padding: 10px 18px;
-    /* font-size: 0.9rem; */
+    padding: 10px 15px;
+    border-left: 3px solid transparent;
 }
-.accordion-button::after {
+.accordian-main .accordion-item:first-of-type ,
+.accordian-main .accordion-item:first-of-type>.accordion-header .accordion-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.accordian-main .accordion-button::after {
     background-size: 15px;
     width: 15px;
     height: 15px;
 }
-.accordion-button:not(.collapsed)::after {
+.accordian-main .accordion-button:not(.collapsed)::after {
     background-size: 15px;
+}
+.accordian-main .accordion-body {
+    padding: 12px;
 }
