@@ -1,67 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Indian Animal Farming Admin</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        body {
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+        /* body {
+            background: #f1f1f1;
+        } */
+        
         .login-container {
-            background-color: #fff;
-            padding: 2rem;
+            background: #f9f0ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .login-img {
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+            overflow: hidden;
+        }
+        .login-img img{
             width: 100%;
+            height: 100%;
+            max-height: 480px;
         }
-        .login-container h1 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #333;
+        .login-data {
+            padding: 25px 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            margin-left: -30px;
         }
-        .btn-primary {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
+        ul.other-login-options li a{
+            margin: 5px;
+            text-decoration: none;
         }
-        .btn-primary:hover {
-            background-color: #45a049;
-            border-color: #45a049;
+        ul.other-login-options a img {
+            width: 30px;
+            height: auto;
         }
-    </style>
+        @media screen and (max-width: 768px) {
+            .login-container {
+                padding: 20px;
+            }
+            .login-data {
+                padding: 30px 20px;
+                margin-left: 0;
+            }
+            .login-img img{
+                max-height: 150px;
+            }
+            .login-img {
+                margin: -10px;
+            }
+            
+        }
+        </style>
+        <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="/login" method="POST">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container w-100">
+            <div class="row g-0">
+                <div class="col-xl-7 col-md-6">
+                    <div class="login-img">
+                        <img src="data:image/jpeg;base64,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" alt="Logo" class="logo">
+                    </div>
+
+                </div>
+                <div class="col-xl-5 col-md-6 align-self-center">
+                    <div class="login-data">
+                        <h4 class="fw-bold">Login</h4>
+                        <p>or <a href="#" class="text-decoratin-none text-main">create an account</a> if you don't have one yet </p>
+                        <form action="/login" method="POST">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username"
+                                    placeholder="Enter username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Enter password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-main w-100">Login</button>
+                            <div class="text-end my-1">
+                                <a href="/forgot-password" class="text-decoration-none text-main fw-semibold">Forgot Password?</a>
+                            </div>
+                        </form>
+                        <div class="d-flex align-items-center justify-content-center my-2">
+                            <hr class="w-100"/>
+                            <span class="px-3">OR</span>
+                            <hr class="w-100"/>
+                        </div>
+                        <ul class="other-login-options list-unstyled text-center mb-0">
+                            <li>
+                                <a href="#" class="">
+                                    <img src="https://f.hubspotusercontent30.net/hubfs/2235233/blog-import/2020/20-08-Aug/sm-icons-facebook-logo.png" alt="">
+                                </a>
+                                <a href="#" class="">
+                                    <img src="https://2235233.fs1.hubspotusercontent-na1.net/hubfs/2235233/blog-import/2022/07-22-Jul/every-social-media-logo-and-icon-in-one-handy-place-instagram.png" alt="">
+                                </a>
+                                <a href="#" class="">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3938/3938028.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+
+                        
+                    </div>
+
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="remember-me" name="remember-me">
-                <label class="form-check-label" for="remember-me">Remember Me</label>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-        <div class="text-center mt-3">
-            <a href="/forgot-password" class="text-muted">Forgot Password?</a>
+
         </div>
     </div>
 
+
     <!-- Bootstrap 5 JS (Optional for interactivity) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
