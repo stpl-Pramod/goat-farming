@@ -26,7 +26,6 @@ body {
     /* background: #ffffff; */
     border-radius: 5px;
     color: #363636;
-    
     margin-bottom: 8px;
 }
 .sidebar .nav-link:hover {
@@ -41,7 +40,7 @@ body {
     background: #d7e2ff;
     padding: 4px;
 }
-.nav-item .collapse .nav-link{
+.nav-item .nav-link .nav-link{
     font-size: 0.9rem;
     padding-left: 30px;
     background: transparent;
