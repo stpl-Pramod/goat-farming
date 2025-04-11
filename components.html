@@ -421,7 +421,7 @@
                     </table>
                 </div>
 
-                <!-- Modal -->
+                <!-- Modal 1 -->
                 <button type="button" class="btn btn-sm btn-main " data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Launch demo modal
                 </button>
@@ -437,6 +437,30 @@
                             <div class="modal-body">
                                 Modal body text goes here.
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem eius dolor quasi quia ea aliquid amet reiciendis nam error! Unde nesciunt nisi eaque commodi illum aliquam dicta ut eius dolor voluptates quisquam perferendis, id tempora sequi adipisci expedita inventore vero facilis voluptatem. Vero doloribus quo ea, cum rem eum deserunt dolore cumque possimus unde? Possimus aperiam, inventore sint rem ducimus illum vero necessitatibus optio nulla similique consequatur deserunt eligendi non id excepturi! Temporibus alias veniam natus odit error esse voluptatem debitis sint dolore provident suscipit deleniti molestias iure officia hic ducimus placeat, fugit delectus eos possimus quos facere. Aut, ea sint alias possimus repellat recusandae culpa cupiditate, quasi voluptatum reiciendis, et accusantium doloribus? Qui earum temporibus hic fuga iste eius et saepe ad amet facilis, alias officiis odit sed reiciendis necessitatibus aliquam quisquam, dolor quos molestias culpa delectus dolore ipsa, ipsam illo. Id, voluptates sit. Inventore architecto porro obcaecati esse, qui odio reprehenderit atque quasi id culpa totam nisi eveniet, consectetur sunt tempore. Beatae doloremque voluptas ducimus quaerat sint laboriosam, adipisci quis eos. Cum inventore adipisci rerum quae animi earum exercitationem iste rem, veritatis est similique ullam. Magnam debitis atque possimus maxime quas molestias eos doloribus repudiandae voluptas? Explicabo est dignissimos velit voluptatem blanditiis nisi tempore error harum. Quod eum, possimus distinctio aperiam temporibus exercitationem harum minima nostrum saepe obcaecati voluptates, natus expedita vel quibusdam necessitatibus modi sed ducimus porro aliquid, eveniet odit! Deserunt quidem optio, tenetur, non repellendus quam, quaerat obcaecati porro ea provident eos est. Numquam, magni beatae quia praesentium similique delectus iusto perferendis blanditiis fugiat quasi necessitatibus earum cum doloribus, neque magnam obcaecati odio debitis autem eum sapiente a accusamus tempora! Quaerat iure repellendus optio excepturi, odio sunt obcaecati id rem eligendi. Totam, repellendus. Nostrum deserunt esse labore delectus qui consequatur commodi odit ad? Molestiae inventore doloribus non placeat consequuntur eos earum quis nesciunt, aperiam aliquid illum voluptatum corrupti quae aspernatur, unde, facilis nemo totam alias veniam culpa error molestias? Earum odio tempora numquam qui. Non laudantium veritatis totam velit dignissimos facilis, ipsum commodi magnam id! Natus reprehenderit earum rerum perspiciatis placeat rem incidunt suscipit in facilis, doloremque iste, iusto aliquam obcaecati error accusamus officiis perferendis architecto cumque ea doloribus magnam ducimus pariatur libero nemo. Ex iste magni maiores ipsum tenetur accusantium sunt omnis error soluta provident repellendus dolores aut dicta dignissimos, quod exercitationem neque adipisci corrupti. Adipisci ut quas eos ratione itaque perspiciatis, illo fugit laboriosam?</p>
+                            </div>
+                            <div class="modal-footer py-1">
+                                <button type="button" class="btn btn-sm btn-main-light" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-sm btn-main">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 1 -->
+                <button type="button" class="btn btn-sm btn-main " data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Launch demo modal
+                </button>
+                <div class="modal fade modal-main" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header py-2">
+                                <h6 class="modal-title" id="exampleModalLabel">Modal title</h6>
+                                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Modal body text goes here.
+                                <p>Lorem ipsum dolor sit amet consectetur,</p>
                             </div>
                             <div class="modal-footer py-1">
                                 <button type="button" class="btn btn-sm btn-main-light" data-bs-dismiss="modal">Close</button>
@@ -494,8 +518,41 @@
             </div>
         </div>
         <div class="card mb-2">
-            <div class="card-header"></div>
-            <div class="card-body"></div>
+            <div class="card-header">Nav Pills / Nav Tabs</div>
+            <div class="card-body">
+                <h6>Radio-tabs</h6>
+                <div class="radio-tabs mb-3">
+                    <input type="radio" id="radio-1" name="tabs" checked />
+                    <label class="tab" for="radio-1">Home</label>
+                    <input type="radio" id="radio-2" name="tabs" checked />
+                    <label class="tab" for="radio-2">About</label>
+                    <input type="radio" id="radio-3" name="tabs" checked />
+                    <label class="tab" for="radio-3">Contact Us</label>
+                    <span class="glider"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-pills nav-pills-main mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">home-tab-content</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">profile-tab-content</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">contact-tab-content</div>
+                    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">home-tab-content</div>
+                  </div>
+            </div>
         </div>
     </div>
 
